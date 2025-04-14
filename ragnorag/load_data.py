@@ -104,8 +104,8 @@ def load_messi_article():
 
 
 def cleanup():
-    es.indices.delete(index=INDEX_NAME, ignore=[400, 404])
-    es.inference.delete(inference_id="wiki-inference", ignore=[400, 404])
+    es.indices.delete(index=INDEX_NAME, ignore_unavailable=True)
+    es.options(ignore_status=[400, 404]).inference.delete(inference_id="wiki-inference")
 
 
 if __name__ == "__main__":
