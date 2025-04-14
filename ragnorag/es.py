@@ -2,11 +2,9 @@ from elasticsearch import Elasticsearch
 import os
 
 os.environ["ELASTIC_ENDPOINT"] = (
-    "https://serverless-lab-abe759.es.us-east-1.aws.elastic.cloud:443"
+        "your_endpoint_here"  # Replace with your actual endpoint
 )
-os.environ["ELASTIC_API_KEY"] = (
-    "WUFKSDVaVUJJdmpfRlh1QmpNRFo6Qk9pU3hOLW4zRm05b1JwMWFiZ3VaZw=="
-)
+os.environ["ELASTIC_API_KEY"] = "your_api_key_here"  # Replace with your actual API key
 
 es = Elasticsearch(
     os.environ["ELASTIC_ENDPOINT"],
