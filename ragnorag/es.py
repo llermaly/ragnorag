@@ -1,8 +1,10 @@
 from elasticsearch import Elasticsearch
 import os
 
-os.environ["ELASTIC_ENDPOINT"] = "YOUR_ELASTIC_ENDPOINT"
-os.environ["ELASTIC_API_KEY"] = "YOUR_ELASTIC_API_KEY"
+os.environ["ELASTIC_ENDPOINT"] = (
+        "your_endpoint_here"  # Replace with your actual endpoint
+)
+os.environ["ELASTIC_API_KEY"] = "your_api_key_here"  # Replace with your actual API key
 
 es = Elasticsearch(
     os.environ["ELASTIC_ENDPOINT"],
